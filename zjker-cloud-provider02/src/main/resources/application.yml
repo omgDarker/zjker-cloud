@@ -1,0 +1,13 @@
+server:
+  port: 9002
+
+#应用名称
+spring:
+  application:
+    name: provider-user
+
+#注册服务地址 http://localhost:9001/provider/index
+eureka:
+  client:
+    service-url:
+      defaultZone: http://zjker:8888@localhost:8888/eureka

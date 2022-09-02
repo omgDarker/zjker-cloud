@@ -1,0 +1,20 @@
+server:
+  port: 9500
+
+#应用名称
+spring:
+  application:
+    name: gateway-zuul
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://zjker:8888@localhost:8888/eureka
+
+zuul:
+  ignored-services: "*"
+  routes:
+    app-a:
+      path: /u/**
+      #其实zuul实现负载均衡很简单，使用serviceId进行绑定后，如果有多个相同的serviceid，则会进行轮询的方式进行访问
+      serviceId: provider-user

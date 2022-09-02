@@ -1,0 +1,18 @@
+server:
+  port: 8888
+
+spring:
+  security:
+    basic:
+      enabled: true
+    user:
+      name: zjker
+      password: 8888
+
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://zjker:8888@localhost:8888/eureka
